@@ -25,5 +25,9 @@
 		"node": "18",
 		"golang": "1.19"
 	},
-	"extensions": ["Vue.volar", "dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "golang.go"]
+	"customizations": {
+		"vscode": {
+			"extensions": ["Vue.volar", "dbaeumer.vscode-eslint", "esbenp.prettier-vscode", "golang.go"]
+		}
+	}
 }
