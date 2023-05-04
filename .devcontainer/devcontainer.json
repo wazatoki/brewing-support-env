@@ -6,7 +6,7 @@
 		"dockerfile": "Dockerfile",
 		// Update 'VARIANT' to pick an Ubuntu version: jammy / ubuntu-22.04, focal / ubuntu-20.04, bionic /ubuntu-18.04
 		// Use ubuntu-22.04 or ubuntu-18.04 on local arm64/Apple Silicon.
-		"args": { "VARIANT": "ubuntu-20.04" }
+		"args": { "VARIANT": "ubuntu-22.04" }
 	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -20,7 +20,9 @@
 	"workspaceMount": "source=${localWorkspaceFolder},target=/home/vscode/local-workspace,type=bind,consistency=cached",
 	"workspaceFolder": "/home/vscode",
 	"features": {
-		"docker-in-docker": "latest",
+		"docker-in-docker": {
+			"version": "latest"
+		},
 		"git": "latest",
 		"node": "18",
 		"golang": "1.19"
